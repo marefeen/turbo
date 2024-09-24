@@ -21,6 +21,9 @@ jobs:
       - name: Install pnpm globally (if not already installed)
         run: npm install -g pnpm
 
+      - name: Install Turbo globally
+        run: npm install -g turbo
+
       - name: npm install, build (TurboRepo)
         run: |
           pnpm install
