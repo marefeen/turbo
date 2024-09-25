@@ -31,8 +31,8 @@ jobs:
 
       - name: Zip artifact for deployment (TurboRepo)
         run: |
-          pnpm run build my-app --filter=my-app-deployment^...  # Build only the deployable parts
-          cd apps/my-app/dist  # Assuming your output is in dist
+          pnpm run build my-app --filter=production  # Build only the deployable parts
+          cd apps/docs/storybook-static  # Assuming your output is in dist
           zip release.zip ./* -r        # Zip the contents of the output directory
 
       - name: Upload artifact for deployment job
